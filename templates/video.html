@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Subtitle Encoded Video</title>
+	<title>Subtitle Encoded Video</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom, #4F7CAC, #99B2DD);
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			color: #fff;
+			padding: 50px;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		h1 {
+			margin-top: 0;
+			text-align: center;
+			font-size: 36px;
+		}
+		video {
+			margin-top: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			overflow: hidden;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        video[height="640"][width="480"] {
+            transform: rotate(90deg);
+        }
+        video:focus {
+			outline: none;
+		}
+	</style>
 </head>
 <body>
-    <h1>Subtitle Encoded Video</h1>
-    <video width="640" height="480" controls>
-        <source src="{{ video_url }}" type="video/mp4">
-
-    </video>
+	<h1>Subtitle Encoded Video</h1>
+	<video width="640" height="480" controls>
+		<source src="{{ video_url }}" type="video/mp4">
+	</video>
 </body>
 </html>
